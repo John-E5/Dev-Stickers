@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row row-flex">
+            {% for sticker in stickers %}
+                <div class="col-md-4 card" style="width: 18rem;">
+                    <img src="{{ MEDIA_URL }}{{ sticker.image }}" class="card-img-top" alt="sticker image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ sticker.name }}</h5>
+                        <p class="card-text">{{ sticker.description }}.</p>
+                        <p>{{ sticker.price }}</p>
+
+                        {% comment %}<form method="post" action="{% url 'add_to_cart' sticker.id %}">
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <input type="number" name="quantity" min="1" max="999" class="form-control" placeholder="Quantity">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success">Add</button>
+                                </span>
+                            </div>
+                        </form>{% endcomment %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
