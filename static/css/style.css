@@ -5,3 +5,12 @@ section {
 footer {
     height: 400px;
 }
+
+.img-fluid {
+    max-width: 40%;
+}
+
+.card {
+    background: transparent;
+    border-style: none;
+}

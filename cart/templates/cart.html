@@ -5,10 +5,10 @@
 {% block content %}
     <div class="container">
             {% for item in cart_items %}
-                <div class="card">
+                <div class="card mb-3">
                     <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="{{ MEDIA_URL }}{{ item.sticker.image }}" class="card-img" alt="sticker image">
+                        <div class="col-md-4 cart">
+                            <img src="{{ MEDIA_URL }}{{ item.sticker.image }}" class="card-img img-fluid" alt="sticker image">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -20,12 +20,13 @@
                                     <div class="form-group">
                                         <label for="exampleInputAmount" class="sr-only">New Qty</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon">Qty</div>
+                                            <div class="input-group-addon">Qty
                                             <input name="quantity" type="number" min="0" max="999" class="form-control">
                                             <div class="input-group-addon">{{ item.quantity }}</div>
+                                                </div>
+                                            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
                                 </form>
                             </div>
                         </div>
