@@ -4,36 +4,40 @@
 
 {% block content %}
     <div class="container">
-        <div class="row row-flex">
             {% for item in cart_items %}
-                <div class="col-md-3 card">
-                    <img src="{{ MEDIA_URL }}{{ item.sticker.image }}" class="card-img-top" alt="sticker image">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ item.sticker.name }}</h5>
-                        <p class="card-text">{{ item.sticker.description }}.</p>
-                        <p>{{ item.sticker.price }}</p>
-
-                        <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                            {% csrf_token %}
-                            <div class="form-group">
-                            <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                            <div class="input-group">
-                                <div class="input-group-addon">Qty</div>
-                                <input name="quantity" type="number" min="0" max="999" class="form-control">
-                                <div class="input-group-addon">{{ item.quantity }}</div>
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ MEDIA_URL }}{{ item.sticker.image }}" class="card-img" alt="sticker image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.sticker.name }}</h5>
+                                <p class="card-text">{{ item.sticker.description }}. ${{ item.sticker.price }}</p>
+                                <p></p>
+                                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">Qty</div>
+                                            <input name="quantity" type="number" min="0" max="999" class="form-control">
+                                            <div class="input-group-addon">{{ item.quantity }}</div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+                                </form>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                        </form>
                     </div>
                 </div>
             {% endfor %}
-        </div>
+    </div>
+    <div class="container">
         <div class="row">
-            <p>Total</p>
-            <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
+            <p>Total </p>
+            <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span> ${{ total }}</p>
             <a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
         </div>
     </div>
-
 {% endblock %}
