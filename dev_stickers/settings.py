@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'landing',
     'stickers',
     'cart',
+    'posts',
 ]
 
 MIDDLEWARE = [
