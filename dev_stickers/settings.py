@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'stickers',
     'cart',
     'posts',
+    'checkout',
 ]
 
 MIDDLEWARE = [

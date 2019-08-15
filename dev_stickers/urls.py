@@ -21,6 +21,7 @@ from accounts import urls as urls_accounts
 from stickers import urls as urls_stickers
 from posts import urls as urls_posts
 from search import urls as urls_search
+from checkout import urls as urls_checkout
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -33,5 +34,6 @@ urlpatterns = [
     url(r'^posts/', include(urls_posts)),
     url(r'^cart/', include(urls_cart)),
     url(r'^search/', include(urls_search)),
+    url(r'^checkout/', include(urls_checkout)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]
