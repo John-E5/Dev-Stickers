@@ -6,6 +6,20 @@ footer {
     height: 400px;
 }
 
+.jumbotron {
+    height: 100vh;
+    background-image: url("/media/images/hero-sticker-image.jpg");
+    background-position: center center;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3c4957;
+}
+
 .img-fluid {
     max-width: 40%;
 }
@@ -13,4 +27,12 @@ footer {
 .card {
     background: transparent;
     border-style: none;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+.fa {
+    padding: 2px;
 }
