@@ -3,7 +3,7 @@
 {% block content %}
     <section class="hero">
         <div class="jumbotron jumbotron-fluid">
-            <div class="container text-center">
+            <div class="container text-center jumbo-title">
                 <h1 class="display-1 font-weight-bold">Dev Stickers</h1>
                 <hr class="my-1">
                 <p class="lead font-weight-bold">Top Blog Posts and All the Best Developer Stickers.</p>
@@ -26,6 +26,7 @@
                     </div>
                 </div>
                 {% endfor %}
+            <a href="{% url 'stickers' %}" class="col-md-2 offset-md-5 btn btn-primary">View Stickers</a>
             </div>
         </div>
     </section>
@@ -56,7 +57,7 @@
     <section class="reviews">
         <div class="container">
             <div class="row">
-                <blockquote class="blockquote card">
+                <blockquote class="blockquote">
                     <p>Greatest stickers i bought with very fast shipping</p>
                     <footer>person<cite>2 days ago</cite></footer>
                 </blockquote>

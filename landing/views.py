@@ -12,4 +12,6 @@ def index(request):
     """
     stickers = Sticker.objects.all()[:4]
     posts = Post.objects.all().order_by('created_date')[:2]
-    return render(request, 'index.html', {'posts': posts, 'stickers': stickers})
+
+    args = {'posts': posts, 'stickers': stickers}
+    return render(request, 'index.html', args)
