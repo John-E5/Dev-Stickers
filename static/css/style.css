@@ -16,6 +16,10 @@ footer {
     color: #3c4957;
 }
 
+.jumbo-title {
+    padding-top: 0 !important;
+}
+
 .img-fluid {
     max-width: 40%;
 }
