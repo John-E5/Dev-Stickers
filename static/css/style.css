@@ -1,7 +1,3 @@
-section {
-    height: 100vh;
-}
-
 footer {
     height: 400px;
 }
@@ -18,6 +14,10 @@ footer {
     align-items: center;
     justify-content: center;
     color: #3c4957;
+}
+
+.jumbo-title {
+    padding-top: 0 !important;
 }
 
 .img-fluid {
