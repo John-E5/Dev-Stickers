@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <section class="hero">
+    <section id="hero">
         <div class="jumbotron jumbotron-fluid">
             <div class="container text-center jumbo-title">
                 <h1 class="display-1 font-weight-bold">Dev Stickers</h1>
@@ -14,8 +14,9 @@
         </div>
     </section>
 
-    <section class="stickers">
+    <section id="stickers">
         <div class="container">
+            <hr>
             <h1 class="text-center">Newest Stickers</h1>
             <div class="row">
                 {% for sticker in stickers %}
@@ -31,8 +32,9 @@
         </div>
     </section>
 
-    <section class="posts text-center">
+    <section id="posts">
         <div class="container">
+            <hr>
             <h1 class="text-center">Latest Posts</h1>
             <div class="row">
                 {% for post in posts %}
@@ -54,8 +56,9 @@
         </div>
     </section>
 
-    <section class="reviews">
+    <section id="reviews">
         <div class="container">
+            <hr>
             <div class="row">
                 <blockquote class="blockquote">
                     <p>Greatest stickers i bought with very fast shipping</p>
