@@ -5,7 +5,6 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container text-center jumbo-title">
                 <h1 class="display-1 font-weight-bold">Dev Stickers</h1>
-                <hr class="my-1">
                 <p class="lead font-weight-bold">Top Blog Posts and All the Best Developer Stickers.</p>
                 <p class="lead">
                     <a class="btn btn-primary btn-lg" href="{% url 'stickers' %}" role="button">Shop Now</a>
@@ -16,8 +15,8 @@
 
     <section id="stickers">
         <div class="container">
-            <hr>
             <h1 class="text-center">Newest Stickers</h1>
+            <hr class="section-hr">
             <div class="row">
                 {% for sticker in stickers %}
                 <div class="col-md-3">
@@ -27,15 +26,18 @@
                     </div>
                 </div>
                 {% endfor %}
-            <a href="{% url 'stickers' %}" class="col-md-2 offset-md-5 btn btn-primary">View Stickers</a>
+                <div class="col-8 offset-3 col-md-2 offset-md-5 sticker-button">
+                    <a href="{% url 'stickers' %}" class="btn btn-primary">View
+                        Stickers</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="posts">
         <div class="container">
-            <hr>
             <h1 class="text-center">Latest Posts</h1>
+            <hr class="section-hr">
             <div class="row">
                 {% for post in posts %}
                 <div class="col-md-6 card text-center">
@@ -58,12 +60,38 @@
 
     <section id="reviews">
         <div class="container">
-            <hr>
+            <h1 class="text-center">Reviews</h1>
+            <hr class="section-hr">
             <div class="row">
-                <blockquote class="blockquote">
-                    <p>Greatest stickers i bought with very fast shipping</p>
-                    <footer>person<cite>2 days ago</cite></footer>
-                </blockquote>
+                <div class="col-xs-12 col-md-6">
+                    <div class="media">
+                        <div class="media-left hidden-xs">
+                            <img src="media/images/woman.png" class="rounded-circle" height=100 width=100>
+                        </div>
+                        <div class="media-body">
+                            <blockquote class="quote">
+                                <p>Bought a pack of 10 different stickers and the shipping was fast,
+                                    A very smooth and efficient service.</p>
+                                    <p>I will be buying more very soon.</p>
+                                <footer>Jane Doe on <cite title="Twitter">Twitter</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="media">
+                        <div class="media-left hidden-xs">
+                            <img src="media/images/guy-image.png" class="rounded-circle" height=100 width=100>
+                        </div>
+                        <div class="media-body">
+                            <blockquote class="quote">
+                                <p>I love reading the blog posts!</p>
+                                <p>They have been very informative and funny to read</p>
+                                <footer>John Doe on <cite title="Twitter">Twitter</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

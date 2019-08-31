@@ -1,4 +1,8 @@
+
 /*--------------------------------------------------------------------Landing*/
+h1 {
+    padding-top: 50px;
+}
 
 .jumbotron {
     height: 100vh;
@@ -12,6 +16,7 @@
     align-items: center;
     justify-content: center;
     color: #3c4957;
+    margin: 0;
 }
 
 .jumbo-title {
@@ -25,10 +30,6 @@
 .card {
     background: transparent;
     border-style: none;
-}
-
-.container {
-    padding-top: 50px;
 }
 
 .fa {
@@ -51,4 +52,48 @@ hr:before {
   border-color: #8c8b8b;
   border-width: 0 0 1px 0;
   border-radius: 20px;
+}
+
+hr.section-hr {
+    width: 300px;
+    color: black;
+}
+
+/*--------------------------------Landing stickers*/
+
+#stickers {
+    background-color: #133768;
+    padding: 0;
+    margin: 0;
+}
+
+.sticker-button {
+    margin-bottom: 50px;
+}
+
+/*--------------------------------Landing posts*/
+
+.card-footer {
+    margin-bottom: 50px;
+}
+
+/*--------------------------------Landing reviews*/
+
+#reviews {
+    background-color: #133768;
+}
+
+.quote {
+    border-left: 5px solid black;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, .25);
+}
+
+.media {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+.rounded-circle {
+    margin: 10px;
 }
