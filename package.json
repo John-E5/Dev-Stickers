@@ -1,0 +1,7 @@
+{
+  "name": "Dev-Stickers",
+  "version": "1.0.0",
+  "dependencies": {
+    "sal.js": "latest"
+  }
+}

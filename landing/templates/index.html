@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block saljs %}
+        <script type="text/javascript" src="{% static 'js/sal.js' %}"></script>
+{% endblock %}
 
 {% block content %}
-    <section class="hero">
+    <section id="hero">
         <div class="jumbotron jumbotron-fluid">
             <div class="container text-center jumbo-title">
-                <h1 class="display-1 font-weight-bold">Dev Stickers</h1>
-                <hr class="my-1">
+                <h1 class="display-1 font-weight-bold" data-sal="flip-up">Dev Stickers</h1>
                 <p class="lead font-weight-bold">Top Blog Posts and All the Best Developer Stickers.</p>
                 <p class="lead">
                     <a class="btn btn-primary btn-lg" href="{% url 'stickers' %}" role="button">Shop Now</a>
@@ -14,29 +18,35 @@
         </div>
     </section>
 
-    <section class="stickers">
+    <section id="stickers">
         <div class="container">
             <h1 class="text-center">Newest Stickers</h1>
+            <hr class="section-hr">
             <div class="row">
                 {% for sticker in stickers %}
-                <div class="col-md-3">
-                    <img src="{{ MEDIA_URL }}{{ sticker.image }}" class="card-img-top" alt="sticker image">
+                <div class="col-md-3" data-sal="slide-up">
+                    <img src="{{ MEDIA_URL }}{{ sticker.image }}" class="card-img-top"
+                         alt="sticker image">
                     <div class="card-body">
                         <h5 class="card-title">{{ sticker.name }}</h5>
                     </div>
                 </div>
                 {% endfor %}
-            <a href="{% url 'stickers' %}" class="col-md-2 offset-md-5 btn btn-primary">View Stickers</a>
+                <div class="col-8 offset-3 col-md-2 offset-md-5 sticker-button">
+                    <a href="{% url 'stickers' %}" class="btn btn-primary">View
+                        Stickers</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="posts text-center">
+    <section id="posts">
         <div class="container">
             <h1 class="text-center">Latest Posts</h1>
+            <hr class="section-hr">
             <div class="row">
                 {% for post in posts %}
-                <div class="col-md-6 card text-center">
+                <div class="col-md-6 card text-center" data-sal="slide-left">
                     <div class="card-header">
                         Featured Post
                     </div>
@@ -54,13 +64,40 @@
         </div>
     </section>
 
-    <section class="reviews">
+    <section id="reviews">
         <div class="container">
+            <h1 class="text-center">Reviews</h1>
+            <hr class="section-hr">
             <div class="row">
-                <blockquote class="blockquote">
-                    <p>Greatest stickers i bought with very fast shipping</p>
-                    <footer>person<cite>2 days ago</cite></footer>
-                </blockquote>
+                <div class="col-xs-12 col-md-6" data-sal="slide-right">
+                    <div class="media">
+                        <div class="media-left hidden-xs">
+                            <img src="media/images/woman.png" class="rounded-circle" height=100 width=100>
+                        </div>
+                        <div class="media-body">
+                            <blockquote class="quote">
+                                <p>Bought a pack of 10 different stickers and the shipping was fast,
+                                    A very smooth and efficient service.</p>
+                                    <p>I will be buying more very soon.</p>
+                                <footer>Jane Doe on <cite title="Twitter">Twitter</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6" data-sal="slide-left">
+                    <div class="media">
+                        <div class="media-left hidden-xs">
+                            <img src="media/images/guy-image.png" class="rounded-circle" height=100 width=100>
+                        </div>
+                        <div class="media-body">
+                            <blockquote class="quote">
+                                <p>I love reading the blog posts!</p>
+                                <p>They have been very informative and funny to read</p>
+                                <footer>John Doe on <cite title="Twitter">Twitter</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
