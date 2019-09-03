@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
-
+<!-- Load sal js animation library -->
 {% block saljs %}
         <script type="text/javascript" src="{% static 'js/sal.js' %}"></script>
 {% endblock %}
 
 {% block content %}
+
+    <!-- Hero section -->
     <section id="hero">
         <div class="jumbotron jumbotron-fluid">
             <div class="container text-center jumbo-title">
@@ -18,7 +20,9 @@
             </div>
         </div>
     </section>
+    <!-- ./hero section -->
 
+    <!-- Newest Stickers section -->
     <section id="stickers">
         <div class="container">
             <h1 class="text-center">Newest Stickers</h1>
@@ -40,7 +44,9 @@
             </div>
         </div>
     </section>
+    <!-- ./newest stickers -->
 
+    <!-- Latest posts section -->
     <section id="posts">
         <div class="container">
             <h1 class="text-center">Latest Posts</h1>
@@ -65,7 +71,9 @@
             </div>
         </div>
     </section>
+    <!-- ./latest posts -->
 
+    <!-- Info section -->
     <section id="info">
         <div class="container-fluid info">
             <div class="row info-row">
@@ -88,7 +96,9 @@
             </div>
         </div>
     </section>
+    <!-- ./info section -->
 
+    <!-- Review section -->
     <section id="reviews">
         <div class="container">
             <h1 class="text-center">Reviews</h1>
@@ -126,11 +136,20 @@
             </div>
         </div>
     </section>
+    <!-- ./review section -->
 
+    <!-- Footer section -->
     <footer>
-        <form action="{% url 'search' %}" method="get">
-            <input type="text" name="q">
-            <button type="submit">Search</button>
-        </form>
+        <ul class="social-links">
+            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        <h6 class="center"><a href="https://github.com/John-E5" target="_blank">Built by John Ennis</a></h6>
     </footer>
+    <!-- ./footer -->
+
 {% endblock %}

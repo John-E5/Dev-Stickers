@@ -137,5 +137,14 @@ hr.section-hr {
 }
 
 footer {
-    height: 250px;
+    height: 100px;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links li {
+    display: inline-block;
+    padding: 50px;
 }
