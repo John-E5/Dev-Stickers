@@ -9,7 +9,8 @@
     <section id="hero">
         <div class="jumbotron jumbotron-fluid">
             <div class="container text-center jumbo-title">
-                <h1 class="display-1 font-weight-bold" data-sal="flip-up">Dev Stickers</h1>
+                <h1 class="display-1 font-weight-bold" data-sal="flip-up" data-sal-delay="200"
+                    data-sal-easing="ease-out-bounce">Dev Stickers</h1>
                 <p class="lead font-weight-bold">Top Blog Posts and All the Best Developer Stickers.</p>
                 <p class="lead">
                     <a class="btn btn-primary btn-lg" href="{% url 'stickers' %}" role="button">Shop Now</a>
@@ -24,7 +25,7 @@
             <hr class="section-hr">
             <div class="row">
                 {% for sticker in stickers %}
-                <div class="col-md-3" data-sal="slide-up">
+                <div class="col-md-3" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease-out-bounce">
                     <img src="{{ MEDIA_URL }}{{ sticker.image }}" class="card-img-top"
                          alt="sticker image">
                     <div class="card-body">
@@ -46,7 +47,8 @@
             <hr class="section-hr">
             <div class="row">
                 {% for post in posts %}
-                <div class="col-md-6 card text-center" data-sal="slide-up">
+                <div class="col-md-6 card text-center" data-sal="slide-up" data-sal-delay="200"
+                     data-sal-easing="ease-out-bounce">
                     <div class="card-header">
                         Featured Post
                     </div>
@@ -64,12 +66,35 @@
         </div>
     </section>
 
+    <section id="info">
+        <div class="container-fluid info">
+            <div class="row info-row">
+                <div class="col-md-4 text-center">
+                    <h3>Quality Assured</h3>
+                    <span class="fa-stack fa-3x">
+                        <i class="fa fa-certificate fa-stack-2x"></i>
+                        <i class="fa fa-check fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Secure Payments</h3>
+                    <i class="fa fa-lock fa-5x"></i>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Fast Shipping</h3>
+                    <i class="fa fa-truck fa-5x"></i>
+                    <i class="fa fa-align-left fa-4x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="reviews">
         <div class="container">
             <h1 class="text-center">Reviews</h1>
             <hr class="section-hr">
             <div class="row">
-                <div class="col-xs-12 col-md-6" data-sal="slide-up">
+                <div class="col-xs-12 col-md-6">
                     <div class="media">
                         <div class="media-left hidden-xs">
                             <img src="media/images/woman.png" class="rounded-circle" height=100 width=100>
@@ -84,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-6" data-sal="slide-down">
+                <div class="col-xs-12 col-md-6">
                     <div class="media">
                         <div class="media-left hidden-xs">
                             <img src="media/images/guy-image.png" class="rounded-circle" height=100 width=100>
