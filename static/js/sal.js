@@ -2,5 +2,5 @@
 
 sal({
   threshold: 1,
-  once: false,
+  once: true,
 });
