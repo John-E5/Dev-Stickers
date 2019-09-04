@@ -103,6 +103,8 @@ hr.section-hr {
     margin: 10px;
 }
 
+/*--------------------------------Landing info*/
+
 .fa-certificate {
     color: #0000CC;
 }
@@ -136,6 +138,8 @@ hr.section-hr {
     padding-bottom: 150px;
 }
 
+/*--------------------------------Landing footer*/
+
 footer {
     height: 100px;
 }
@@ -147,4 +151,18 @@ footer {
 .social-links li {
     display: inline-block;
     padding: 50px;
+}
+
+/*--------------------------------Blogposts*/
+
+.blog-title {
+    color: black;
+    padding-top: 100px;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+
+.blog-post {
+    background-color: #4E5D6C;
+    padding-top: 20px;
 }

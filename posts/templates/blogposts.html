@@ -1,24 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container">
-    {% for post in posts %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 offset-md-1">
-                    <h3>{{ post.title }}</h3>
-                        <div class="post-content col-xs-12">
-                            <p>{{ post.content | truncatewords:60 }}</p>
-                            <p><a href="{% url 'post_detail' post.id %}" class="btn btn-default">Read More</a></p>
-                            <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                            <p><span class="boldtext">Views:</span> {{ post.views }} </p>
-                            <p><span class="boldtext">Tag:</span> {{ post.tag }} </p>
+
+    <h1 class="blog-title display-1 text-center"><em>Lets Talk Stickers</em></h1>
+        {% for post in posts %}
+            <div class="container text-center blog-post">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <h3>{{ post.title }}</h3>
+                            <div class="post-content lead col-xs-12">
+                                <p>{{ post.content | truncatewords:60 }}</p>
+                                <p><a href="{% url 'post_detail' post.id %}" class="btn btn-default">Read More</a></p>
+                                <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+                                <p><span class="boldtext">Views:</span> {{ post.views }} </p>
+                                <p><span class="boldtext">Tag:</span> {{ post.tag }} </p>
+                            </div>
+                            <hr>
                         </div>
-                        <hr>
                     </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
-    </div>
+        {% endfor %}
 {% endblock %}
