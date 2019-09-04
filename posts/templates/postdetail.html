@@ -4,10 +4,10 @@
     <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h3>{{ post.title }}</h3>
+                    <h3 class="blog-title display-4 text-center"><em>{{ post.title }}</em></h3>
                     <div class="row">
                         <div class="col-xs-12">
-                            <p>{{ post.content }}</p>
+                            <p class="blog-post">{{ post.content }}</p>
                             <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
                             <p><span class="boldtext">Views:</span> {{post.views}}</p>
                             <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
