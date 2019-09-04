@@ -166,3 +166,14 @@ footer {
     background-color: #4E5D6C;
     padding-top: 20px;
 }
+
+/*--------------------------------Shop*/
+
+.sticker-container {
+    color: black;
+    background-color: #133768;
+}
+
+.sticker-title {
+    padding-bottom: 20px;
+}
