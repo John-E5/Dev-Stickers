@@ -2,9 +2,9 @@
 {% block page_title %}Register {% endblock %}
 {% load bootstrap_tags %}
 {% block content %}
-    <div class="container">
+    <div class="container register-container">
         <div class="row justify-content-center">
-            <form method="post" action="{% url 'register' %}" class="col-sm-12 col-md-4 card accountform">
+            <form method="post" action="{% url 'register' %}" class="col-sm-12 col-md-4 card register-card">
                 <fieldset class="form-group">
                     <legend class="card-title">Create a new account</legend>
                     {% csrf_token %}

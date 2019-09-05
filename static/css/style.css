@@ -3,6 +3,17 @@ section {
     margin: 0;
 }
 
+/*--------------------------------------------------------------------Accounts*/
+
+.login-container, .register-container {
+    padding-top: 100px;
+    color: #dcd268;
+}
+.login-card, .register-card {
+    background-color: #133768;
+}
+
+
 /*--------------------------------------------------------------------Landing*/
 h1 {
     padding-top: 50px;
