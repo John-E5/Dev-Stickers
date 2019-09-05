@@ -3,6 +3,17 @@ section {
     margin: 0;
 }
 
+/*--------------------------------------------------------------------Accounts*/
+
+.login-container, .register-container {
+    padding-top: 100px;
+    color: #dcd268;
+}
+.login-card, .register-card {
+    background-color: #133768;
+}
+
+
 /*--------------------------------------------------------------------Landing*/
 h1 {
     padding-top: 50px;
@@ -156,7 +167,7 @@ footer {
 /*--------------------------------Blogposts*/
 
 .blog-title {
-    color: black;
+    color: #dcd268;
     padding-top: 100px;
     font-weight: bold;
     padding-bottom: 50px;
@@ -165,4 +176,52 @@ footer {
 .blog-post {
     background-color: #4E5D6C;
     padding-top: 20px;
+}
+
+/*--------------------------------Shop*/
+
+.sticker-container {
+    color: #dcd268;
+    background-color: #133768;
+}
+
+.sticker-title {
+    padding-bottom: 20px;
+}
+
+/*--------------------------------Cart*/
+
+.cart-container {
+    background-color: #133768;
+    color: #dcd268;
+    padding: 50px 0 50px 0;
+}
+
+.cart-title {
+    padding-top: 30px;
+}
+
+.cart {
+    margin-top: 20px;
+    padding-left: 50px;
+}
+
+.total {
+    padding-right: 50px;
+}
+
+.checkout-button {
+    margin-left: 30px;
+}
+
+/*--------------------------------Checkout*/
+
+.checkout-container {
+    padding-top: 100px;
+    background-color: #133768;
+    color: #dcd268;
+}
+
+.checkout-total {
+    background-color: #0000CC;
 }
