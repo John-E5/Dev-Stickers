@@ -3,6 +3,10 @@ section {
     margin: 0;
 }
 
+.alert-success {
+    padding-top: 50px;
+    margin-bottom: 0;
+}
 /*--------------------------------------------------------------------Accounts*/
 
 .login-container, .register-container {
@@ -175,7 +179,7 @@ footer {
 
 .blog-post {
     background-color: #4E5D6C;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 /*--------------------------------Shop*/

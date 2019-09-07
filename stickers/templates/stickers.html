@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block page_title %}Shop {% endblock %}
 {% block content %}
-    <div class="container sticker-container">
-        <h1 class="display-1 text-center sticker-title"><em>Sticker Collection</em></h1>
-        <div class="row row-flex">
+    <div class="container sticker-container col-sm-12">
+        <h1 class="display-1 text-center sticker-title"><em>Sticker Shop</em></h1>
+        <div class="row">
             {% for sticker in stickers %}
                 <div class="col-md-3 card">
                     <img src="{{ MEDIA_URL }}{{ sticker.image }}" class="card-img-top" alt="sticker image">
