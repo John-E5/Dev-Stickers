@@ -108,3 +108,4 @@ env.py
 
 # Pycharm project settings
 .idea
+/node_modules/
