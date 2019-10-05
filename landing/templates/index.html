@@ -30,7 +30,7 @@
             <hr class="section-hr">
             <div class="row">
                 {% for sticker in stickers %}
-                <div class="col-md-3" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease-out-bounce">
+                <div class="col-md-3" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-sine">
                     <img src="{{ MEDIA_URL }}{{ sticker.image }}" class="card-img-top"
                          alt="sticker image">
                     <div class="card-body">
@@ -54,8 +54,7 @@
             <hr class="section-hr">
             <div class="row">
                 {% for post in posts %}
-                <div class="col-md-6 card text-center" data-sal="slide-up" data-sal-delay="200"
-                     data-sal-easing="ease-out-bounce">
+                <div class="col-md-6 card text-center" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-sine">
                     <div class="card-header">
                         Featured Post
                     </div>
@@ -78,18 +77,18 @@
     <section id="info">
         <div class="container-fluid info">
             <div class="row info-row">
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-sine">
                     <h3>Quality Assured</h3>
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-certificate fa-stack-2x"></i>
                         <i class="fa fa-check fa-stack-1x"></i>
                     </span>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-sine">
                     <h3>Secure Payments</h3>
                     <i class="fa fa-lock fa-5x"></i>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-sine">
                     <h3>Fast Shipping</h3>
                     <i class="fa fa-truck fa-5x"></i>
                     <i class="fa fa-align-left fa-4x"></i>
@@ -105,7 +104,7 @@
             <h1 class="text-center">Reviews</h1>
             <hr class="section-hr">
             <div class="row">
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-md-6" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-sine">
                     <div class="media">
                         <div class="media-left hidden-xs">
                             <img src="https://dev-stickers.s3-eu-west-1.amazonaws.com/media/images/woman.png" class="rounded-circle" height=100 width=100>
@@ -120,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-md-6" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-sine">
                     <div class="media">
                         <div class="media-left hidden-xs">
                             <img src="https://dev-stickers.s3-eu-west-1.amazonaws.com/media/images/guy-image.png" class="rounded-circle" height=100 width=100>
