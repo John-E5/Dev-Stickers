@@ -165,13 +165,15 @@ For this project the following Technologies were used:
 - [PYCHARM](https://www.jetbrains.com/pycharm/)
     - I used **PyCharm** as the IDE of choice for the development of this app
 
+- [TravisCI](https://travis-ci.org/)
+    - I used **TravisCI** for deployment testing
 ## Testing
 
 ### Unit Tests
 Pytest and Pytest-django was used for unit testing this app,
 I tested the views for the correct 200 responses of each app with also then testing some form elements
 i used pytest-cov for tracking test coverage.
-
+Travis CI is used for testing before deployment
 
 ### Manual Testing
 
