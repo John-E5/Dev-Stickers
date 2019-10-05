@@ -167,6 +167,9 @@ For this project the following Technologies were used:
 
 - [TravisCI](https://travis-ci.org/)
     - I used **TravisCI** for deployment testing
+    
+- [AWS S3](https://aws.amazon.com/)
+    - I used **AWS S3** for static file hosting
 ## Testing
 
 ### Unit Tests
